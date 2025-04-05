@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useTetris } from '../hooks/useTetris';
 import TetrisGrid from './TetrisGrid';
 import PiecePreview from './PiecePreview';
@@ -12,20 +12,15 @@ const TetrisGame: React.FC = () => {
   const {
     gameState,
     resetGame,
-    getShadowPosition
+    getShadowPosition,
+    togglePause,
+    isPaused
   } = useTetris();
 
-  const [isPaused, setIsPaused] = useState(false);
   const shadowY = getShadowPosition();
-
-  // Pause/resume game
-  const togglePause = () => {
-    setIsPaused(!isPaused);
-  };
 
   // Handle reset
   const handleReset = () => {
-    setIsPaused(false);
     resetGame();
   };
 
@@ -33,13 +28,13 @@ const TetrisGame: React.FC = () => {
   useEffect(() => {
     const handleVisibilityChange = () => {
       if (document.hidden) {
-        setIsPaused(true);
+        togglePause();
       }
     };
 
     document.addEventListener('visibilitychange', handleVisibilityChange);
     return () => document.removeEventListener('visibilitychange', handleVisibilityChange);
-  }, []);
+  }, [togglePause]);
 
   return (
     <div className="tetris-container relative select-none">

@@ -73,6 +73,7 @@ export const useTetris = () => {
   // Game timing
   const [dropTime, setDropTime] = useState<number | null>(INITIAL_DROP_TIME);
   const [speedUp, setSpeedUp] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
 
   // Reset game
   const resetGame = useCallback(() => {
@@ -91,6 +92,7 @@ export const useTetris = () => {
       gameOver: false
     });
     setDropTime(INITIAL_DROP_TIME);
+    setIsPaused(false);
   }, []);
 
   // Merge current tetromino with the board
@@ -137,6 +139,8 @@ export const useTetris = () => {
 
   // Move tetromino
   const moveTetromino = useCallback((x: number, y: number) => {
+    if (isPaused) return;
+    
     setGameState(prev => {
       const newX = prev.currentPiece.x + x;
       const newY = prev.currentPiece.y + y;
@@ -192,10 +196,12 @@ export const useTetris = () => {
       
       return prev;
     });
-  }, [calculateScore, clearCompletedRows, mergePieceWithBoard]);
+  }, [calculateScore, clearCompletedRows, isPaused, mergePieceWithBoard]);
 
   // Rotate tetromino
   const rotatePiece = useCallback(() => {
+    if (isPaused) return;
+    
     setGameState(prev => {
       const rotatedShape = rotateTetromino(prev.currentPiece.shape);
       
@@ -236,10 +242,12 @@ export const useTetris = () => {
       // If rotation not possible, return unchanged state
       return prev;
     });
-  }, []);
+  }, [isPaused]);
 
   // Hard drop
   const hardDrop = useCallback(() => {
+    if (isPaused) return;
+    
     setGameState(prev => {
       let dropDistance = 0;
       let newY = prev.currentPiece.y;
@@ -291,10 +299,12 @@ export const useTetris = () => {
         level: newLevel
       };
     });
-  }, [calculateScore, clearCompletedRows, mergePieceWithBoard]);
+  }, [calculateScore, clearCompletedRows, isPaused, mergePieceWithBoard]);
 
   // Hold piece
   const holdPiece = useCallback(() => {
+    if (isPaused) return;
+    
     setGameState(prev => {
       // Skip if already held this turn
       if (prev.hasHeldThisTurn) return prev;
@@ -339,11 +349,16 @@ export const useTetris = () => {
         hasHeldThisTurn: true
       };
     });
+  }, [isPaused]);
+
+  // Toggle pause state
+  const togglePause = useCallback(() => {
+    setIsPaused(prev => !prev);
   }, []);
 
   // Drop piece automatically based on level
   useEffect(() => {
-    if (!dropTime || gameState.gameOver) return;
+    if (!dropTime || gameState.gameOver || isPaused) return;
     
     const dropSpeedByLevel = INITIAL_DROP_TIME - (gameState.level - 1) * 50;
     const currentDropTime = speedUp ? SPEED_UP_DROP_TIME : Math.max(dropSpeedByLevel, 100);
@@ -353,14 +368,14 @@ export const useTetris = () => {
     }, currentDropTime);
     
     return () => clearInterval(dropInterval);
-  }, [gameState.gameOver, gameState.level, dropTime, moveTetromino, speedUp]);
+  }, [gameState.gameOver, gameState.level, dropTime, moveTetromino, speedUp, isPaused]);
 
   // Handle keyboard controls
   useEffect(() => {
-    if (gameState.gameOver) return;
+    if (gameState.gameOver || isPaused) return;
     
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (gameState.gameOver) return;
+      if (gameState.gameOver || isPaused) return;
       
       switch (e.key) {
         case 'ArrowLeft':
@@ -400,7 +415,7 @@ export const useTetris = () => {
       document.removeEventListener('keydown', handleKeyDown);
       document.removeEventListener('keyup', handleKeyUp);
     };
-  }, [gameState.gameOver, hardDrop, holdPiece, moveTetromino, rotatePiece]);
+  }, [gameState.gameOver, hardDrop, holdPiece, moveTetromino, rotatePiece, isPaused]);
 
   // Calculate shadow position for current piece
   const getShadowPosition = useCallback(() => {
@@ -425,6 +440,8 @@ export const useTetris = () => {
     rotatePiece,
     hardDrop,
     holdPiece,
-    getShadowPosition
+    getShadowPosition,
+    togglePause,
+    isPaused
   };
 };
