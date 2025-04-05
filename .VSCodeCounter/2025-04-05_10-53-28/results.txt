@@ -1,0 +1,124 @@
+Date : 2025-04-05 10:53:28
+Directory : c:\Proyectos\videogames\retro-block-blitz-game-12
+Total : 82 files,  12873 codes, 86 comments, 762 blanks, all 13721 lines
+
+Languages
++--------------------+------------+------------+------------+------------+------------+
+| language           | files      | code       | comment    | blank      | total      |
++--------------------+------------+------------+------------+------------+------------+
+| JSON               |          5 |      7,260 |          4 |          9 |      7,273 |
+| TypeScript JSX     |         61 |      4,665 |         31 |        595 |      5,291 |
+| TypeScript         |          8 |        745 |         49 |        109 |        903 |
+| CSS                |          2 |         97 |          1 |         27 |        125 |
+| JavaScript         |          2 |         34 |          0 |          3 |         37 |
+| Markdown           |          1 |         27 |          0 |         12 |         39 |
+| HTML               |          1 |         25 |          1 |          6 |         32 |
+| JSON with Comments |          1 |         19 |          0 |          1 |         20 |
+| XML                |          1 |          1 |          0 |          0 |          1 |
++--------------------+------------+------------+------------+------------+------------+
+
+Directories
++-----------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                    | files      | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                       |         82 |     12,873 |         86 |        762 |     13,721 |
+| . (Files)                                                                               |         12 |      7,502 |          6 |         36 |      7,544 |
+| public                                                                                  |          1 |          1 |          0 |          0 |          1 |
+| src                                                                                     |         69 |      5,370 |         80 |        726 |      6,176 |
+| src (Files)                                                                             |          5 |        124 |          3 |         34 |        161 |
+| src\components                                                                          |         57 |      4,592 |         30 |        577 |      5,199 |
+| src\components (Files)                                                                  |          8 |        322 |         16 |         64 |        402 |
+| src\components\ui                                                                       |         49 |      4,270 |         14 |        513 |      4,797 |
+| src\hooks                                                                               |          3 |        529 |         39 |         94 |        662 |
+| src\lib                                                                                 |          2 |         92 |          8 |         12 |        112 |
+| src\pages                                                                               |          2 |         33 |          0 |          9 |         42 |
++-----------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-----------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| filename                                                                                | language           | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| c:\Proyectos\videogames\retro-block-blitz-game-12\README.md                             | Markdown           |         27 |          0 |         12 |         39 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\components.json                       | JSON               |         20 |          0 |          0 |         20 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\eslint.config.js                      | JavaScript         |         28 |          0 |          2 |         30 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\index.html                            | HTML               |         25 |          1 |          6 |         32 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\package-lock.json                     | JSON               |      7,113 |          0 |          1 |      7,114 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\package.json                          | JSON               |         84 |          0 |          1 |         85 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\postcss.config.js                     | JavaScript         |          6 |          0 |          1 |          7 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\public\placeholder.svg                | XML                |          1 |          0 |          0 |          1 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\App.css                           | CSS                |         37 |          0 |          6 |         43 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\App.tsx                           | TypeScript JSX     |         23 |          1 |          4 |         28 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\GameControls.tsx       | TypeScript JSX     |         32 |          0 |          6 |         38 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\GameOver.tsx           | TypeScript JSX     |         22 |          0 |          5 |         27 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\Instructions.tsx       | TypeScript JSX     |         21 |          0 |          8 |         29 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\PiecePreview.tsx       | TypeScript JSX     |         44 |          1 |          7 |         52 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ScoreDisplay.tsx       | TypeScript JSX     |         21 |          0 |          7 |         28 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\TetrisBlock.tsx        | TypeScript JSX     |         35 |          2 |          9 |         46 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\TetrisGame.tsx         | TypeScript JSX     |         87 |          7 |         12 |        106 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\TetrisGrid.tsx         | TypeScript JSX     |         60 |          6 |         10 |         76 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\accordion.tsx       | TypeScript JSX     |         49 |          0 |          8 |         57 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\alert-dialog.tsx    | TypeScript JSX     |        126 |          0 |         14 |        140 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\alert.tsx           | TypeScript JSX     |         53 |          0 |          7 |         60 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\aspect-ratio.tsx    | TypeScript JSX     |          3 |          0 |          3 |          6 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\avatar.tsx          | TypeScript JSX     |         43 |          0 |          6 |         49 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\badge.tsx           | TypeScript JSX     |         31 |          0 |          6 |         37 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\breadcrumb.tsx      | TypeScript JSX     |        105 |          0 |         11 |        116 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\button.tsx          | TypeScript JSX     |         51 |          0 |          6 |         57 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\calendar.tsx        | TypeScript JSX     |         60 |          0 |          5 |         65 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\card.tsx            | TypeScript JSX     |         71 |          0 |          9 |         80 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\carousel.tsx        | TypeScript JSX     |        231 |          0 |         30 |        261 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\chart.tsx           | TypeScript JSX     |        326 |          2 |         36 |        364 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\checkbox.tsx        | TypeScript JSX     |         25 |          0 |          4 |         29 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\collapsible.tsx     | TypeScript JSX     |          5 |          0 |          5 |         10 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\command.tsx         | TypeScript JSX     |        136 |          0 |         18 |        154 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\context-menu.tsx    | TypeScript JSX     |        181 |          0 |         18 |        199 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\dialog.tsx          | TypeScript JSX     |        108 |          0 |         13 |        121 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\drawer.tsx          | TypeScript JSX     |        104 |          0 |         13 |        117 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\dropdown-menu.tsx   | TypeScript JSX     |        181 |          0 |         18 |        199 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\form.tsx            | TypeScript JSX     |        152 |          0 |         25 |        177 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\hover-card.tsx      | TypeScript JSX     |         22 |          0 |          6 |         28 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\input-otp.tsx       | TypeScript JSX     |         62 |          0 |          8 |         70 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\input.tsx           | TypeScript JSX     |         19 |          0 |          4 |         23 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\label.tsx           | TypeScript JSX     |         20 |          0 |          5 |         25 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\menubar.tsx         | TypeScript JSX     |        216 |          0 |         19 |        235 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\navigation-menu.tsx | TypeScript JSX     |        117 |          0 |         12 |        129 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\pagination.tsx      | TypeScript JSX     |        107 |          0 |         11 |        118 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\popover.tsx         | TypeScript JSX     |         24 |          0 |          6 |         30 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\progress.tsx        | TypeScript JSX     |         23 |          0 |          4 |         27 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\radio-group.tsx     | TypeScript JSX     |         38 |          0 |          5 |         43 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\resizable.tsx       | TypeScript JSX     |         38 |          0 |          6 |         44 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\scroll-area.tsx     | TypeScript JSX     |         42 |          0 |          5 |         47 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\select.tsx          | TypeScript JSX     |        145 |          0 |         14 |        159 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\separator.tsx       | TypeScript JSX     |         26 |          0 |          4 |         30 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\sheet.tsx           | TypeScript JSX     |        116 |          0 |         16 |        132 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\sidebar.tsx         | TypeScript JSX     |        696 |         12 |         54 |        762 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\skeleton.tsx        | TypeScript JSX     |         13 |          0 |          3 |         16 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\slider.tsx          | TypeScript JSX     |         23 |          0 |          4 |         27 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\sonner.tsx          | TypeScript JSX     |         25 |          0 |          5 |         30 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\switch.tsx          | TypeScript JSX     |         24 |          0 |          4 |         28 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\table.tsx           | TypeScript JSX     |        107 |          0 |         11 |        118 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\tabs.tsx            | TypeScript JSX     |         47 |          0 |          7 |         54 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\textarea.tsx        | TypeScript JSX     |         20 |          0 |          5 |         25 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\toast.tsx           | TypeScript JSX     |        115 |          0 |         13 |        128 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\toaster.tsx         | TypeScript JSX     |         31 |          0 |          3 |         34 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\toggle-group.tsx    | TypeScript JSX     |         51 |          0 |          9 |         60 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\toggle.tsx          | TypeScript JSX     |         38 |          0 |          6 |         44 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\tooltip.tsx         | TypeScript JSX     |         22 |          0 |          7 |         29 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\components\ui\use-toast.ts        | TypeScript         |          2 |          0 |          2 |          4 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\hooks\use-mobile.tsx              | TypeScript JSX     |         15 |          0 |          5 |         20 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\hooks\use-toast.ts                | TypeScript         |        159 |          2 |         31 |        192 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\hooks\useTetris.ts                | TypeScript         |        355 |         37 |         58 |        450 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\index.css                         | CSS                |         60 |          1 |         21 |         82 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\lib\tetrominos.ts                 | TypeScript         |         87 |          8 |         10 |        105 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\lib\utils.ts                      | TypeScript         |          5 |          0 |          2 |          7 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\main.tsx                          | TypeScript JSX     |          4 |          0 |          2 |          6 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\pages\Index.tsx                   | TypeScript JSX     |         10 |          0 |          4 |         14 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\pages\NotFound.tsx                | TypeScript JSX     |         23 |          0 |          5 |         28 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\src\vite-env.d.ts                     | TypeScript         |          0 |          1 |          1 |          2 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\tailwind.config.ts                    | TypeScript         |        117 |          0 |          3 |        120 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\tsconfig.app.json                     | JSON               |         25 |          2 |          4 |         31 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\tsconfig.json                         | JSON with Comments |         19 |          0 |          1 |         20 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\tsconfig.node.json                    | JSON               |         18 |          2 |          3 |         23 |
+| c:\Proyectos\videogames\retro-block-blitz-game-12\vite.config.ts                        | TypeScript         |         20 |          1 |          2 |         23 |
+| Total                                                                                   |                    |     12,873 |         86 |        762 |     13,721 |
++-----------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
