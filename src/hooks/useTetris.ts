@@ -372,34 +372,32 @@ export const useTetris = () => {
 
   // Handle keyboard controls
   useEffect(() => {
-    if (gameState.gameOver || isPaused) return;
-    
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (gameState.gameOver || isPaused) return;
+      if (gameState.gameOver) return;
       
       switch (e.key) {
         case 'ArrowLeft':
-          moveTetromino(-1, 0);
+          if (!isPaused) moveTetromino(-1, 0);
           break;
         case 'ArrowRight':
-          moveTetromino(1, 0);
+          if (!isPaused) moveTetromino(1, 0);
           break;
         case 'ArrowDown':
-          setSpeedUp(true);
+          if (!isPaused) setSpeedUp(true);
           break;
         case 'ArrowUp':
-          rotatePiece();
+          if (!isPaused) rotatePiece();
           break;
         case 'p':
         case 'P':
           togglePause();
           break;
         case ' ':
-          hardDrop();
+          if (!isPaused) hardDrop();
           break;
         case 'c':
         case 'C':
-          holdPiece();
+          if (!isPaused) holdPiece();
           break;
         default:
           break;
