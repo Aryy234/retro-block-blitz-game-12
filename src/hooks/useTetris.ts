@@ -13,6 +13,8 @@ const BOARD_WIDTH = 10;
 const BOARD_HEIGHT = 20;
 const INITIAL_DROP_TIME = 1000; // in ms
 const SPEED_UP_DROP_TIME = 50; // in ms when down arrow is pressed
+const SCORE_SPEED_THRESHOLD = 5000; // Score threshold for speed increase
+const SPEED_INCREASE_PERCENTAGE = 0.25; // 25% speed increase
 
 // Define Game State
 export interface TetrisState {
@@ -356,19 +358,29 @@ export const useTetris = () => {
     setIsPaused(prev => !prev);
   }, []);
 
-  // Drop piece automatically based on level
+  // Drop piece automatically based on level and score
   useEffect(() => {
     if (!dropTime || gameState.gameOver || isPaused) return;
     
+    // Calculate base drop speed by level
     const dropSpeedByLevel = INITIAL_DROP_TIME - (gameState.level - 1) * 50;
-    const currentDropTime = speedUp ? SPEED_UP_DROP_TIME : Math.max(dropSpeedByLevel, 100);
+    
+    // Calculate additional speed increase based on score
+    const scoreMultiplier = Math.floor(gameState.score / SCORE_SPEED_THRESHOLD);
+    const speedMultiplier = Math.pow(1 - SPEED_INCREASE_PERCENTAGE, scoreMultiplier);
+    
+    // Calculate final drop time with both level and score effects
+    const adjustedDropTime = dropSpeedByLevel * speedMultiplier;
+    
+    // Use speed up time if down arrow is pressed, otherwise use adjusted time
+    const currentDropTime = speedUp ? SPEED_UP_DROP_TIME : Math.max(Math.floor(adjustedDropTime), 100);
     
     const dropInterval = setInterval(() => {
       moveTetromino(0, 1);
     }, currentDropTime);
     
     return () => clearInterval(dropInterval);
-  }, [gameState.gameOver, gameState.level, dropTime, moveTetromino, speedUp, isPaused]);
+  }, [gameState.gameOver, gameState.level, gameState.score, dropTime, moveTetromino, speedUp, isPaused]);
 
   // Handle keyboard controls
   useEffect(() => {

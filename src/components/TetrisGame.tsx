@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { useTetris } from '../hooks/useTetris';
 import TetrisGrid from './TetrisGrid';
@@ -7,6 +6,7 @@ import ScoreDisplay from './ScoreDisplay';
 import GameControls from './GameControls';
 import Instructions from './Instructions';
 import GameOver from './GameOver';
+import Footer from './Footer';
 
 const TetrisGame: React.FC = () => {
   const {
@@ -98,6 +98,7 @@ const TetrisGame: React.FC = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
