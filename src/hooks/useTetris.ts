@@ -390,6 +390,10 @@ export const useTetris = () => {
         case 'ArrowUp':
           rotatePiece();
           break;
+        case 'p':
+        case 'P':
+          togglePause();
+          break;
         case ' ':
           hardDrop();
           break;
@@ -415,7 +419,7 @@ export const useTetris = () => {
       document.removeEventListener('keydown', handleKeyDown);
       document.removeEventListener('keyup', handleKeyUp);
     };
-  }, [gameState.gameOver, hardDrop, holdPiece, moveTetromino, rotatePiece, isPaused]);
+  }, [gameState.gameOver, hardDrop, holdPiece, moveTetromino, rotatePiece, isPaused, togglePause]);
 
   // Calculate shadow position for current piece
   const getShadowPosition = useCallback(() => {
